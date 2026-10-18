@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "search-aggregation": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/mcp/server.mjs"
+      ],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "env": {
+        "SEARCH_PROXY": "${user_config.proxy}",
+        "SEARCH_TIMEOUT": "${user_config.timeout}"
+      },
+      "timeoutMs": 120000
+    }
+  }
+}

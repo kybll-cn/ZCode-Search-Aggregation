@@ -1,0 +1,6 @@
+# 各引擎抓取到的页面快照：体积大且随时可用 tests/capture-fixtures.mjs 重新抓取
+tests/fixtures/*.raw
+
+node_modules/
+*.log
+.DS_Store

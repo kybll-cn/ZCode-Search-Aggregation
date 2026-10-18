@@ -1,0 +1,45 @@
+{
+  "name": "zcode-search-aggregation",
+  "version": "1.0.0",
+  "description": "Parallel multi-engine web search for ZCode: query Baidu, Bing, 360, Sogou, GitHub, Google, Yahoo and DuckDuckGo at once, merge and dedupe the results, and fall back to mainland-only engines automatically when the global internet is unreachable.",
+  "description_i18n": {
+    "en": "Parallel multi-engine web search for ZCode: query Baidu, Bing, 360, Sogou, GitHub, Google, Yahoo and DuckDuckGo at once, merge and dedupe the results, and fall back to mainland-only engines automatically when the global internet is unreachable.",
+    "zh-CN": "ZCode 的多引擎并行搜索：一次同时查百度、必应、360、搜狗、GitHub、Google、Yahoo、DuckDuckGo，汇总去重；外网不可达时自动降级为仅用大陆搜索引擎。"
+  },
+  "author": {
+    "name": "kybll"
+  },
+  "license": "MIT",
+  "keywords": [
+    "search",
+    "web-search",
+    "meta-search",
+    "aggregation",
+    "baidu",
+    "bing",
+    "sogou",
+    "so360",
+    "google",
+    "yahoo",
+    "duckduckgo",
+    "github",
+    "mcp"
+  ],
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "proxy": {
+      "type": "string",
+      "default": "auto",
+      "title": "代理设置",
+      "description": "auto：自动探测本机常见代理端口（Clash 7897/7890、v2rayN 10809 等），探测不到就全部直连；off：完全不使用代理；也可以直接填代理地址，例如 http://127.0.0.1:7897。境内引擎（百度/必应/360/搜狗）始终直连，这个设置只影响境外引擎。"
+    },
+    "timeout": {
+      "type": "string",
+      "default": "15000",
+      "title": "单引擎超时（毫秒）",
+      "description": "单个搜索引擎的请求超时时间，默认 15000。网络较慢或代理链路长时可以调到 25000；想让它更快放弃不可达的引擎可以调小到 8000。"
+    }
+  }
+}

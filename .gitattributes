@@ -1,0 +1,2 @@
+# 仓库内统一 LF，避免跨平台行尾差异
+* text=auto eol=lf

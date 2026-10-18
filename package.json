@@ -1,0 +1,19 @@
+{
+  "name": "@zcode-plugin/search-aggregation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Parallel multi-engine web search MCP server for ZCode (Baidu, Bing, 360, Sogou, GitHub, Google, Yahoo, DuckDuckGo).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node tests/test-http.mjs && node tests/test-mcp.mjs",
+    "test:http": "node tests/test-http.mjs",
+    "test:engines": "node tests/test-engines.mjs",
+    "test:stability": "node tests/test-stability.mjs",
+    "test:offline": "node tests/test-offline-fallback.mjs",
+    "capture": "node tests/capture-fixtures.mjs"
+  }
+}
